@@ -11011,57 +11011,104 @@ textarea.form-control-lg {
   text-transform: capitalize;
 }
 
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to new lines */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+  justify-content: center; /* Keeps elements aligned properly */
+  align-items: center; /* Ensures equal height */
+}
+
 .portfolio {
-  padding: 4rem 0;
+padding: 4rem 0;
 }
 .portfolio button {
-  text-transform: capitalize;
+text-transform: capitalize;
 }
 
 .portfolio-box {
-  position: relative;
-  width: 100%;
-  height: 18.5rem;
-  overflow: hidden;
-  margin-bottom: 1.2rem;
-  border-top: 0.5rem solid #c685f7;
+background: #f4f4f4;
+width: 50px;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+border: 1px solid #ddd;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+flex: 1 1 calc(33.333% - 20px); /* Ensures 3 equal columns */
+max-width: calc(33.333% - 20px); /* Prevents stretching */
+}
+
+@media (max-width: 767px) { /* Small screens (1 column) */
+.portfolio-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Medium screens (2 columns) */
+.portfolio-box {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+}
+
+@media (min-width: 1024px) { /* Large screens (3 columns) */
+.portfolio-box {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+}
+
+.portfolio-box {
+position: relative;
+width: 100%;
+height: 18.5rem;
+overflow: hidden;
+margin-bottom: 1.2rem;
+border-top: 0.5rem solid #c685f7;
 }
 .portfolio-box img {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 }
 .portfolio-box .portfolio-info {
-  background-color: rgba(153, 38, 240, 0.75);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
+background-color: rgba(153, 38, 240, 0.75);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+visibility: hidden;
 }
 .portfolio-box .portfolio-info .caption {
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+text-align: center;
+color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 .portfolio-box .portfolio-info .caption h4 {
-  text-transform: uppercase;
-  display: block;
+text-transform: uppercase;
+display: block;
 }
 .portfolio-box:hover img {
-  transform: scale(1.5);
-  transition-duration: 1s;
-  transition-property: all;
+transform: scale(1.5);
+transition-duration: 1s;
+transition-property: all;
 }
 .portfolio-box:hover .portfolio-info {
-  opacity: 1;
-  visibility: visible;
-  transition-duration: 1s;
-  transition-property: all;
+opacity: 1;
+visibility: visible;
+transition-duration: 1s;
+transition-property: all;
 }
 
 .get-started {

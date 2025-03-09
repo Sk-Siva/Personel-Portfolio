@@ -9,49 +9,35 @@
     }
 }
 
-.portfolio-box {
-    position: relative;
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to new lines */
+    gap: 20px;
     width: 100%;
-    height: 18.5rem;
-    overflow: hidden;
-    margin-bottom: 1.2rem;
-    border-radius:10px;
-    img {
-        width: 100%;
-        height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    justify-content: space-between; /* Distributes items evenly */
+    align-items: stretch; /* Ensures equal height */
+}
+
+/* Portfolio Box Styling */
+
+/* Responsive Column Sizing */
+@media (max-width: 767px) { /* Small screens (1 column) */
+    .portfolio-box {
+        flex: 1 1 100%; /* Full width */
     }
+}
 
-    .portfolio-info {
-        background-color: rgba($primary, 0.75);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-
-        .caption {
-        text-align: center;
-        color: $white;
-        @include absoluteCenter;
-
-            h4 {
-                text-transform: uppercase;
-                display: block;
-            }
-        }
+@media (min-width: 768px) and (max-width: 1023px) { /* Medium screens (2 columns) */
+    .portfolio-box {
+        flex: 1 1 calc(50% - 20px); /* 2 columns */
     }
-    &:hover {
+}
 
-        img {
-            transform: scale(1.5);
-            @include transitionProperty;
-        }
-        .portfolio-info {
-            opacity: 1;
-            visibility: visible;
-            @include transitionProperty;
-        }
+@media (min-width: 1024px) { /* Large screens (3 columns) */
+    .portfolio-box {
+        flex: 1 1 calc(33.333% - 20px); /* 3 columns */
     }
 }
