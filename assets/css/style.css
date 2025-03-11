@@ -10883,7 +10883,7 @@ textarea.form-control-lg {
 
 .intro-section {
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-  padding: 10rem 0 0 0;
+  padding: 1rem 0 0 0;
   width: 100%;
   height: 100%;
 }
@@ -11029,6 +11029,16 @@ padding: 4rem 0;
 .portfolio button {
 text-transform: capitalize;
 }
+
+.project-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: #ffcc00; 
+}
+
 
 .portfolio-box {
 background: #f4f4f4;
